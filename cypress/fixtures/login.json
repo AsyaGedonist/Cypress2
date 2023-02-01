@@ -1,0 +1,4 @@
+[
+    {"login" : "qamid@qamid.ru", "pass" : "qamid", "expected" : "Администраторррская"},
+    {"login" : "qamid@qamid.ru", "pass" : "123", "expected" : "Администраторррская"}
+]
