@@ -23,3 +23,25 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+const selectors = require("../fixtures/selectors.json");
+
+Cypress.Commands.add("loginAdm", (login, password) => {
+    if (login) {
+        cy.get(selectors.login).type(login);
+    }
+    if (password){
+        cy.get(selectors.pass).type(password);
+    }
+    cy.get(selectors.authButton).click();
+  });
+  
+  Cypress.Commands.add("addFilm", (login, password) => {
+    if (login) {
+        cy.get(selectors.login).type(login);
+    }
+    if (password){
+        cy.get(selectors.pass).type(password);
+    }
+    cy.get(selectors.authButton).click();
+  });
