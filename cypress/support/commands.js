@@ -45,3 +45,16 @@ Cypress.Commands.add("loginAdm", (login, password) => {
     }
     cy.get(selectors.authButton).click();
   });
+
+  Cypress.Commands.add("bookingByName", (day) => {
+    if (day) {
+        cy.get(day).click();
+    }
+    // if (filmName) {
+    //     cy.get(selectors.login).type(login);
+    // }
+    // if (seat){
+    //     cy.get(selectors.pass).type(password);
+    // }
+    // cy.get(selectors.authButton).click();
+  });
