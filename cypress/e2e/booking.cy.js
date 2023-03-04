@@ -10,7 +10,7 @@ it("Add Film and Book it", () => {
       const filmName = $el.text();
     })
     cy.visit("/client/");
-    cy.bookingByName(selectors.weekDay);
+    cy.bookingByName(selectors.weekDay, selectors.filmName, selectors.time);
 
 });
 

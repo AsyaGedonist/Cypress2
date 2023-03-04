@@ -46,13 +46,15 @@ Cypress.Commands.add("loginAdm", (login, password) => {
     cy.get(selectors.authButton).click();
   });
 
-  Cypress.Commands.add("bookingByName", (day) => {
+  Cypress.Commands.add("bookingByName", (day, filmName, time) => {
     if (day) {
         cy.get(day).click();
     }
-    // if (filmName) {
-    //     cy.get(selectors.login).type(login);
-    // }
+    if (filmName) {
+        if (time){
+            cy.contains(filmName).siblings(time).click();
+        }
+    }
     // if (seat){
     //     cy.get(selectors.pass).type(password);
     // }
